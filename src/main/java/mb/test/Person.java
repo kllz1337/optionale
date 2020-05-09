@@ -1,7 +1,5 @@
 package mb.test;
 
-import java.util.Objects;
-
 public class Person {
     private final int pesel;
     private final String name;
@@ -18,5 +16,21 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" + pesel + ", " + name + " " + surname + ", " + salary + '}';
+    }
+
+    public int getPesel() {
+        return pesel;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public double getSalary() {
+        return salary;
     }
 }

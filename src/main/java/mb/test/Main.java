@@ -10,8 +10,11 @@ public class Main {
         List<Person> people = createPeople();
 
         // create db and repository
-        Database db = new Database<>(people);
-        Repository<Person> personRepository = new Repository<>(db);
+        Database<Person> db = new Database<>(people);
+        PersonRepository personRepository = new PersonRepository(db);
+
+//        personRepository.get2(102).ifPresent(person -> System.out.println(person));
+        System.out.println(personRepository.getIdentityByPesel(101).orElse("kibel"));
     }
 
     private static List<Person> createPeople() {
